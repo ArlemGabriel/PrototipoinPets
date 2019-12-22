@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<head>
+    <title>inPETS - Registro de mascota</title>
+    <link rel="icon" href="images/logo_white.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"/>
+    <link rel="stylesheet" type="text/css" href="styles/main.css" media="all"/>
+    <link rel="stylesheet" type="text/css" href="styles/pet_registration.css" media="all"/>
+</head>
+
+<body>
+    <button class="buttton" data-toggle="modal" data-target="#id_modal_recuperarContraseña">Registrar mascota</button>
+    <div class="modal fade" id="id_modal_recuperarContraseña" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title titulo" id="exampleModalLongTitle">Registrar nueva mascota</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                </div>
+                    <div class="contendor_modal" id="id_contendor_modal">
+                        <form id="" action="#">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <h2 class="subtitulo">Nombre</h2>
+                                    <input type="text" class="form-control" required/>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <h2 class="subtitulo">Fecha de nacimiento</h2>
+                                    <input type="date" class="form-control" required/>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <h2 class="subtitulo">Especie</h2>
+                                    <select class="form-control">
+                                        <option value="Perro">Perro</option>
+                                        <option value="Gato">Gato</option>
+                                        <option value="Roedor">Roedor</option>
+                                        <option value="Ave">Ave</option>
+                                        <option value="Pez">Pez</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <h2 class="subtitulo">Raza</h2>
+                                    <input type="text" class="form-control" required/>
+                                </div>
+                            </div>
+                        </form>
+                    <br>
+                        
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Bootstrap Scripts-->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>

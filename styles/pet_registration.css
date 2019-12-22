@@ -1,0 +1,26 @@
+/*Modal*/
+.contendor_modal{
+    padding: 15px;
+}
+
+/*TEXTO*/
+.titulo{
+    color: #646464;
+    padding-bottom: 5px;
+    font-family: 'Helvetica', 'arial', sans-serif;
+    font-size: 25px;
+}
+
+.subtitulo{
+    color: #646464;   
+    font-family: 'Helvetica';
+    font-size: 18px;
+    padding-top: 5px;
+}
+
+.text{
+    color: #646464;
+    font-family: 'Helvetica';
+    font-size: 15px;
+    padding-top: 10px;
+}
