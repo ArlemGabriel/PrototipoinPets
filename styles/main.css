@@ -1,3 +1,12 @@
 html, body{
     background-color: #F4F3EF;
+    font-size: 100%;
+}
+
+#navbar{
+    box-shadow: 0px -1.5em 2em #000000;
+}
+
+#navbar img{
+    height: 2.5em;
 }

@@ -9,8 +9,51 @@
     <link rel="stylesheet" type="text/css" href="styles/vet_registration.css" media="all"/>
 </head>
 <body>
+    <!--Barra de Navegación-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" id="navbar">
+        <a class="navbar-brand" href="index.html">
+            <img src="images/logo.svg" alt="logo"> inPETS
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Acerca de nosotros</a>
+                </li>
+                <li class="nav-item dropdown active">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Registrarse<span class="sr-only">(current)</span>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="owner_registration.html">Como dueño</a>
+                        <a class="dropdown-item " href="#">Como médico veterinario</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Iniciar sesión
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Como dueño</a>
+                        <a class="dropdown-item" href="#">Como médico veterinario</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">¿Olvidó su contraseña?</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!--Cuerpo de la página-->
+
     <div class="container-fluid">
-        <div class="row">
+        <div class="row align-items-center">
             <div class="col-lg-4 d-none d-lg-block colum_non_padding columna_izquierda " >
                 <div class="img_logo_container">
                     <img src="images/logo_white_letters.png" class="img-fluid img_size " />
@@ -18,7 +61,7 @@
             </div>
             <div class="col-lg-8 columna_derecha overflow-auto">
                 <form class="estilo_form">
-                    <h1 class="titulo">Crea tu cuenta ahora </h1>
+                    <h1 class="titulo">Médico veterinario</h1>
                     <h1 class="text">Nombre</h1>
                     <input type="text" class="form-control" name="pass_input"  id="id_nombre" required>
                     <div class="row">
