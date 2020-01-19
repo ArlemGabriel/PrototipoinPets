@@ -10,3 +10,26 @@ html, body{
 #navbar img{
     height: 2.5em;
 }
+
+/*botones*/
+
+.buttton {
+    background-color: #49a0bc;
+    color: white;
+    cursor: pointer;
+    width: 100%;
+    padding: 12px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 4px;
+    opacity: 0.85;
+    display: inline-block;
+    font-size: 17px;
+    line-height: 15px;
+    text-decoration: none;
+    font-family: 'poppins_meddium', 'arial', sans-serif;
+}
+
+.buttton:hover{
+    background-color: #3091B2;
+}

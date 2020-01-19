@@ -1,11 +1,17 @@
 /*columnas*/
+
 .columna_izquierda{
     height: 100vh;
-    background-image: url(../images/owner_registration_bg.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
     background-color: #F4F3EF;
+}
+.columna_izquierda_owner_registration{
+    background-image: url(../images/owner_registration_bg.jpg);
+}
+.columna_izquierda_vet_registration{
+    background-image: url(../images/vet_registration_bg.jpg);
 }
 
 .columna_derecha{
@@ -46,7 +52,6 @@
     font-size: 25px;
 }
 
-
 .subtitulo{
     color: #646464;   
     font-family: 'Helvetica';
@@ -59,28 +64,4 @@
     font-family: 'Helvetica';
     font-size: 15px;
     padding-top: 10px;
-}
-
-
-/*botones*/
-
-.buttton {
-    background-color: #49a0bc;
-    color: white;
-    cursor: pointer;
-    width: 100%;
-    padding: 12px;
-    margin-top: 15px;
-    border: none;
-    border-radius: 4px;
-    opacity: 0.85;
-    display: inline-block;
-    font-size: 17px;
-    line-height: 15px;
-    text-decoration: none;
-    font-family: 'poppins_meddium', 'arial', sans-serif;
-}
-
-button:hover{
-    background-color: #3091B2;
 }
