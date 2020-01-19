@@ -1,4 +1,4 @@
-
+/*Index background with dark overlay*/
 .bg-index{
     position: relative;
     background-color: #000;
@@ -17,20 +17,44 @@
     background:       url(../images/index_bg.jpg) no-repeat center center;
     background-size: cover;
 }
-/*Formulario*/
+/*ForgotPassword background with dark overlay*/
+.bg-forgot-pass{
+    position: relative;
+    background-color: #000;
+}
+
+.bg-forgot-pass::before{
+    content: ' ';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    opacity: 0.5;
+    background:       url(../images/forgotpass_bg.jpg) no-repeat center center;
+    background-size: cover;
+}
+/*Form dark background overlay*/
+.half-black {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+/*Form align and style*/
 .form-align{
     margin-top: 80px;
 }
 .form-title{
-    font-size: xx-large;
+    font-size: 3em;
     margin-top: 25%;
     margin-bottom: 15%;
 }
 .form-large-space{
     margin-top: 30%;
 }
-/*Lista desplegable*/
 
+/*Dropdown menu*/
 .dropdown-menu-form {
     width:100%; /* Make drop down 100% width OPTIONAL */
 }
