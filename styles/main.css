@@ -33,3 +33,12 @@ html, body{
 .buttton:hover{
     background-color: #3091B2;
 }
+
+.footer {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    height: 150px;
+    background: #222;
+}
