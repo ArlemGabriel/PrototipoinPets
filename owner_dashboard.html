@@ -47,8 +47,8 @@
               </div>
                 <div class="col-sm-6 " >
                     <div class="float-right">
-                        <a style="text-align: right;" id="icon_edit" data-toggle="modal" data-target="#modalPermisos"> <i class='fas fa-key'></i> </a>
-                        <a style="text-align: right;" id="icon_filter" data-toggle="modal" data-target="#modalDatosUsuario"> <i class='fas fa-edit'></i> </a> 
+                        <a style="text-align: right;" id="icon_edit" data-toggle="modal" data-target="#modalPermisos" onclick="abrirPermisos()"> <i class='fas fa-key' style="color: #646464;"></i> </a>
+                        <a style="text-align: right;" id="icon_filter" data-toggle="modal" data-target="#modalDatosUsuario"  onclick="abrirEditarPerfil()"> <i class='fas fa-edit' style="color: #646464;"></i> </a> 
                     </div>
                     
                 </div>
@@ -61,7 +61,7 @@
                     <h2 id="user_email"> Correo</h2>
               </div>
                 <div class="col-sm-6">
-                    <h2 style="text-align: right;" id="user_notifications">No tiene notificaciones <i class='fas fa-bell'></i></h2>
+                    <h2 style="text-align: right; cursor: pointer;" id="user_notifications" data-toggle="modal" data-target="#modalNotificaciones"  onclick="abrirNotificaciones()">Notificaciones<i class='fas fa-bell'></i></h2>
                 </div>
             </div>
         </div>
@@ -73,9 +73,9 @@
             <div class="row">
                 <div class="col-sm-12">
                     <div class="float-right">
-                        <a style="text-align: right;" id="icon_edit"> <i class='fas fa-search'></i> </a>
+                        <a style="text-align: right;" id="icon_edit" onclick="buscarMascota()"> <i class='fas fa-search'></i> </a>
                         <input class="texfield" placeholder="Busqueda por nombre, sexo, raza, etc" id="input_search"/>
-                        <button class="buttonAdd">Agregar</button>
+                        <button class="buttonAdd" data-toggle="modal" data-target="#modalagregarMascota" >Agregar </button> 
                     </div>
                 </div>
             </div>
@@ -131,17 +131,17 @@
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
             </div>
             <div class="modal-body">
-                <div class="contenedormodal">
-                    <div class="contenedorPermisos">
+                <div class="contenedormodal" id="contenedormodaPermisos">
+                    <!--<div class="contenedorPermisos">
                         <div class="row">
                             <div class="col-md-8">
                                 <h4><i class='fas fa-user-md'></i> Vetarinario</h4>
                                 <h4><i class='fas fa-paw'></i> Nombre mascota #tag</h4>
                             </div>
-                            <div class="col-md-4 align-self-center"><button class="buttonRed">Revocar acceso</button></div>
+                            <div class="col-md-4 align-self-center"><button class="buttonRed" onclick="revocarAcceso()">Revocar acceso</button></div>
 
                         </div>
-                    </div>
+                    </div>-->
                 </div>
             </div>
       </div>
@@ -162,16 +162,147 @@
             </div>
             <div class="modal-body">
                 <div class="contenedormodal">
-                    <h4>Nombre</h4>
-                    <input class="texfieldModal">
-                    <br>
-                    <h4>Apellidos</h4>
-                    <input class="texfieldModal">
-                    <br>
-                    <h4>Correo</h4>
-                    <input class="texfieldModal">
-                    <br>
-                    <button type="button"></button>
+                    <div class="row" style="margin-bottom: 10px;">
+                        <div class="col-md-1 align-self-center">
+                            <h3><i class='fas fa-user'></i></h3>
+                        </div>
+                        <div class="col-md-11">
+                            <input class="texfieldModal"  id="modalNombre" placeholder="Nombre">
+                        </div>
+                    </div>
+                    <div class="row" style="margin-bottom: 10px;">
+                        <div class="col-md-1 align-self-center">
+                            <h3><i class='fas fa-user'></i></h3>
+                        </div>
+                        <div class="col-md-11">
+                            <input class="texfieldModal"  id="modalApellidos" placeholder="Apellidos">
+                        </div>
+                    </div> 
+                    <div class="row" style="margin-bottom: 10px;">
+                        <div class="col-md-1 align-self-center">
+                            <h3><i class='fas fa-envelope'></i></h3>
+                        </div>
+                        <div class="col-md-11">
+                            <input class="texfieldModal" id="modalCorreo" placeholder="Correo">
+                        </div>
+                    </div>                  
+
+                    <button class="buttonModal" type="button" onclick="modificarPerfil()">Modificar</button>
+                </div>
+            </div>
+      </div>
+  
+    </div>
+  </div>
+
+
+  <!-- Modal notificaciones -->
+<div id="modalNotificaciones" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" style="text-align: center;">Notificaciones</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="contenedormodal" id="contenedormodalNotificaciones">
+                    <!--
+                    <div class="contenedorPermisos">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <h4><i class='fas fa-user-md'></i> Vetarinario</h4>
+                                <h4><i class='fas fa-paw'></i> Nombre mascota #tag</h4>
+                            </div>
+                            <div class="col-md-4">
+                                <div>
+                                    <button class="buttonGreen" onclick="aceptarNotificacion()">Aceptar</button>
+                                    <button class="buttonRed" onclick="descartarNotificacion()">Eliminar</button>
+                                </div>
+                                
+                            </div>
+
+                        </div>
+                    </div>-->
+                </div>
+            </div>
+      </div>
+  
+    </div>
+  </div>
+
+
+
+   <!-- Modal agregar mascotas -->
+<div id="modalagregarMascota" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" style="text-align: center;">Datos de la mascota</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="contenedormodal">
+                    <div class="row" style="margin-bottom: 10px;">
+                        <div class="col-md-1 align-self-center">
+                            <h3><i class='fas fa-paw'></i></h3>
+                        </div>
+                        <div class="col-md-11">
+                            <input class="texfieldModal"  id="modalNombreMascota" placeholder="Nombre de la mascota">
+                        </div>
+                    </div>
+                    <div class="row" style="margin-bottom: 10px;">
+                        <div class="col-md-1 align-self-center">
+                            <h3><i class='fa fa-birthday-cake'></i></h3>
+                        </div>
+                        <div class="col-md-5">
+                            <input type="date" class="texfieldModal"  id="modalNombreBirth" placeholder="Apellidos">
+                        </div>
+                        <div class="col-md-1 align-self-center">
+                            <h3><i class='fa fa-venus-mars'></i></h3>
+                        </div>
+                        <div class="col-md-5">
+                            <select class="texfieldModal">
+                                <option value="Macho">Macho</option>
+                                <option value="Hembra">Hembra</option>
+                              </select>
+                        </div>
+                    </div> 
+                    <div class="row" style="margin-bottom: 10px;">
+                        <div class="col-md-1 align-self-center">
+                            <h3><i class='fas fa-dog'></i></h3>
+                        </div>
+                        <div class="col-md-5">
+                            <select class="texfieldModal">
+                                <option value="Perro">Perro</option>
+                                <option value="Gato">Gato</option>
+                                <option value="Ave">Ave</option>
+                                <option value="Reptil">Reptil</option>
+                                <option value="Roedor">Roedor</option>
+                              </select>
+                        </div>
+                        <div class="col-md-6">
+                            <select class="texfieldModal">
+                                <option value="Pug">Pug</option>
+                                <option value="Boxer">Boxer</option>
+                                <option value="Schnauzer">Schnauzer</option>
+                              </select>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-bottom: 10px;">
+                        <div class="col-md-1 align-self-center">
+                            <h3><i class='far fa-edit'></i></h3>
+                        </div>
+                        <div  class="col-md-11" >
+                            <textarea class="texfieldModal" rows="4" cols="50">
+                            
+                            </textarea>
+                        </div >
+                        
+                    </div>             
+
+                    <button class="buttonModal" type="button" onclick="agregarMascota()">Agregar mascota</button>
                 </div>
             </div>
       </div>
