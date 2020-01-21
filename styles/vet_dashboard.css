@@ -1,0 +1,54 @@
+.icon{
+    width:28px;
+    height: 28px;
+    display:inline-block;
+    vertical-align: middle;
+    background-size: cover;
+}
+
+.icon-mail{
+    background-image: url(../images/mail.svg);
+}
+.icon-identity{
+    background-image: url(../images/fingerprint.svg);
+}
+.icon-vetcode{
+    background-image: url(../images/vetcode.svg);
+}
+.icon-bell-off{
+    background-image: url(../images/bell-off.svg);
+}
+.icon-bell-on{
+    background-image: url(../images/bell-on.svg);
+}
+.icon-key{
+    background-image: url(../images/key.svg);
+}
+.icon-pencil{
+    background-image: url(../images/edit.svg);
+}
+.icon-search{
+    background-image: url(../images/search.svg);
+}
+.icon-pet-profile{
+    background-image: url(../images/pet-record.svg);
+}
+.icon-pet-gender{
+    background-image: url(../images/gender.svg);
+}
+.icon-pet-breed{
+    background-image: url(../images/pet.svg);
+}
+.searchfield{
+    background-color: white;
+    color: #49a0bc;
+    padding: 5px;
+    border: none;
+    border: solid 1px #646464;
+    border-radius: 4px;
+    font-size: 17px;
+    width: 40vw;
+    text-decoration: none;
+    font-family:  'arial', sans-serif;
+    text-align: left;
+}
