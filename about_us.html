@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <head>
-        <title>inPETS</title>
+        <title>inPETS - Registro como dueño</title>
         <link rel="icon" href="images/logo_white.svg">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no"/>
-        <meta http-equiv=”Content-Type” content="text/html" charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta http-equiv="Content-Type" content="text/html" charset="UTF-8"/>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"/>
         <link rel="stylesheet" type="text/css" href="styles/main.css" media="all"/>
         <link rel="stylesheet" type="text/css" href="styles/about_us.css" media="all"/>
-        
 </head>
-<body class="bg-about">
+<body>
+    <!--Barra de Navegación-->
     <nav class="navbar navbar-expand-lg navbar-light bg-light" id="navbar">
         <a class="navbar-brand" href="index.html">
             <img src="images/logo.svg" alt="logo"> inPETS
@@ -20,71 +20,85 @@
         
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="index.html">Inicio<span class="sr-only">(current)</span></a>
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Inicio</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="about_us.html">Acerca de nosotros</a>
                 </li>
-                <li class="nav-item dropdown">
+                <li class="nav-item dropdown active">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Registrarse
+                        Registrarse<span class="sr-only">(current)</span>
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="owner_registration.html">Como dueño</a>
-                        <a class="dropdown-item" href="vet_registration.html">Como médico veterinario</a>
+                        <a class="dropdown-item " href="vet_registration.html">Como médico veterinario</a>
                     </div>
                 </li>
             </ul>
         </div>
     </nav>
-    
-    <div class="row">
-        <div class="col-5 pt-5 bg1 text-padding-left text-padding-right">
-            <h1 style="font-size:5vw;">Acerca de Nosotros</h1>
-            <p style="font-size:1vw;">Somos un equipo conformado por estudiantes del Instituto Tecnológico de Costa Rica, jóvenes emprendedores con deseos de superación. Buscando ofrecer nuevas soluciones para el seguimiento de la salud de sus mascotas.</p> 
-            
-            <div class="row">
-                <div class="col-4 bg2">
-                
-                    <div class="card-header"></div>
-                    <div class="card-body">
-                        <h5 class="card-title">Me gusta dedicar tiempo a ver películas, jugar videojuegos y soy amante de la música</h5>
-                        <p class="card-text">-Gabriel Brenes-</p>
+
+    <!--Cuerpo de la página-->
+    <div >
+        <div class="row text-center">
+            <div class="col-lg-6 d-none d-lg-block colum_non_padding columna_izquierda columna_izquierda_about_us" >
+            </div>
+            <div class="col-lg-6 columna_derecha overflow-auto">
+                <div class="row align-items-center">
+                    <div class="container estilo_form text-margin-top">
+                        <h1 class="text-large-style">Acerca de Nosotros</h1>
+                        <p class="text-small-style text-margin-top">Somos un equipo conformado por estudiantes del Instituto Tecnológico de Costa Rica, jóvenes emprendedores con deseos de superación. Buscando ofrecer nuevas soluciones para el seguimiento de la salud de sus mascotas.</p> 
                     </div>
                 </div>
-                <div class="col-4 bg2">
-                
-                    <div class="card-header"></div>
-                    <div class="card-body">
-                        <h5 class="card-title">Amo jugar con mi perro burrito y me gusta dedicar tiempo a jugar basketball</h5>
-                        <p class="card-text">-Alejandro Schmidt-</p>
+                <div class="row">
+                    <div class="col-xs-6 col-md-4 mt-5">
+                        <div class="card h-100">
+                          <img class="card-img-top" src="../images/divider.jpg" alt="">
+                          <div class="card-body">
+                            <h4 class="card-title">Me gusta dedicar tiempo a ver películas, jugar videojuegos y soy amante de la música</h4>
+                            <p class="card-text">-Gabriel Brenes-</p>
+                          </div>
+                        </div>
                     </div>
-                </div>
-                <div class="col-4 bg2">
-                
-                    <div class="card-header"></div>
-                    <div class="card-body">
-                        <h5 class="card-title">Aquí va descripción de Jean</h5>
-                        <p class="card-text">-Jean Vega-</p>
+                    <div class="col-xs-6 col-md-4 mt-5">
+                        <div class="card h-100">
+                          <img class="card-img-top" src="../images/divider.jpg" alt="">
+                          <div class="card-body">
+                            <h4 class="card-title">Amo jugar con mi perro burrito y me gusta dedicar tiempo a jugar basketball</h4>
+                            <p class="card-text">-Alejandro Schmidt-</p>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-md-4 mt-5">
+                        <div class="card h-100">
+                          <img class="card-img-top" src="../images/divider.jpg" alt="">
+                          <div class="card-body">
+                            <h4 class="card-title">Aqui va la descripción de Jean</h4>
+                            <p class="card-text">-Jean Vega-</p>
+                          </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        
             
         </div>
     </div>
-      
 
     <!--Bootstrap Scripts-->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>    
 </body>
-
 <!-- Footer -->
-<footer class="py-5 footer">
+<footer class="py-5" style="background-color:#222">
     <div class="container">
       <p class="m-0 text-center text-white">©Tecnológico de Costa Rica, 2019-2020</p>
     </div>
-</footer>
+    <div class="container">
+        <p class="m-0 text-center text-white">
+        </p>
+      </div>
+
+    <!-- /.container -->
+  </footer>

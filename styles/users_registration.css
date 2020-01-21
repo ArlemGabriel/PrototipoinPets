@@ -13,7 +13,9 @@
 .columna_izquierda_vet_registration{
     background-image: url(../images/vet_registration_bg.jpg);
 }
-
+.columna_izquierda_about_us{
+    background-image: url(../images/about_bg.jpg);
+}
 .columna_derecha{
     background-color: #F4F3EF;
     overflow-y: auto;
