@@ -117,6 +117,7 @@
      </div>
      <!--Funcionalidad-->
      <script src='scripts/owner_dasboard.js'></script>
+     <script src='scripts/get_strings.js'></script>
     
 </body>
 
@@ -243,7 +244,7 @@
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
             </div>
             <div class="modal-body">
-                <div class="contenedormodal">
+                <div class="contenedormodal" id="datosMascota">
                     <div class="row" style="margin-bottom: 10px;">
                         <div class="col-md-1 align-self-center">
                             <h3><i class='fas fa-paw'></i></h3>
@@ -257,16 +258,16 @@
                             <h3><i class='fa fa-birthday-cake'></i></h3>
                         </div>
                         <div class="col-md-5">
-                            <input type="date" class="texfieldModal"  id="modalBirth" ">
+                            <input type="date" class="texfieldModal"  id="modalBirth">
                         </div>
                         <div class="col-md-1 align-self-center">
                             <h3><i class='fa fa-venus-mars'></i></h3>
                         </div>
                         <div class="col-md-5">
-                            <select class="texfieldModal">
+                            <select id="generoMascota"class="texfieldModal">
                                 <option value="Macho">Macho</option>
                                 <option value="Hembra">Hembra</option>
-                              </select>
+                            </select>
                         </div>
                     </div> 
                     <div class="row" style="margin-bottom: 10px;">
@@ -274,7 +275,7 @@
                             <h3><i class='fas fa-dog'></i></h3>
                         </div>
                         <div class="col-md-5">
-                            <select class="texfieldModal">
+                            <select id="especieMascota" class="texfieldModal">
                                 <option value="Perro">Perro</option>
                                 <option value="Gato">Gato</option>
                                 <option value="Ave">Ave</option>
@@ -283,7 +284,7 @@
                               </select>
                         </div>
                         <div class="col-md-6">
-                            <select class="texfieldModal">
+                            <select id="razaMascota" class="texfieldModal">
                                 <option value="Pug">Pug</option>
                                 <option value="Boxer">Boxer</option>
                                 <option value="Schnauzer">Schnauzer</option>
@@ -295,12 +296,20 @@
                             <h3><i class='far fa-edit'></i></h3>
                         </div>
                         <div  class="col-md-11" >
-                            <textarea class="texfieldModal" rows="4" cols="50">
+                            <textarea id="descripcionMascota" class="texfieldModal" rows="4" cols="50">
                             
                             </textarea>
                         </div >
                         
-                    </div>             
+                    </div>
+                    <div class="row" style="margin-bottom: 30px; margin-top: 30px">
+                        <div class="col-md-1 align-self-center">
+                            <h3></h3>
+                        </div>
+                        <div class="col-md-11">
+                            <input type="file" id="input" onchange="handleFiles(this.files)">
+                        </div>
+                    </div>         
 
                     <button class="buttonModal" type="button" onclick="agregarMascota()">Agregar mascota</button>
                 </div>
