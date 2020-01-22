@@ -47,7 +47,8 @@
             <div class="card card-signin my-5 pl-4 pr-4 half-black">
               <div class="card-body">
                 <h5 class="card-title text-center text-white form-title">Iniciar Sesión</h5>
-                <form class="form-signin">
+                <div class="form-signin">
+                   
                     <div class="form-group mb-4">
                         <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Correo Electrónico">
                     </div>
@@ -55,29 +56,25 @@
                         <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Contraseña">
                     </div>
                     <div class="dropdown mb-2">
-                        <button class="btn btn-outline-secondary dropdown-toggle dropdown-btn" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Tipo de usuario
-                        </button>
-                        <div class="dropdown-menu dropdown-menu-right dropdown-menu-form" aria-labelledby="dropdownMenu2">
-                            <button class="dropdown-item" type="button">Dueño de Mascota</button>
-                            <div class="dropdown-divider"></div>
-                            <button class="dropdown-item" type="button">Médico Veterinario</button>
-                        </div>
+                        <select class="form-control" id="selectorID">
+                            <option value="owner">Dueño de mascota</option>
+                            <option value="vet">Veterinario</option>
+                        </select>
                     </div>
                     
                     <button onclick ="location.href='forgot_password.html'" type="button" class="btn btn-link float-right mb-5">¿Olvidó su contraseña?</button>
-                    
-                    <button class="buttton" type="submit">INGRESAR</button>
+                     <!--Put error messages here-->
+                     <div id="indexAlertMessage">
+                        
+                    </div>
+                    <button class="buttton" type="button" onclick="login()">INGRESAR</button>
                     <hr class="my-4">
                     <button onclick ="location.href='owner_registration.html'" type="button" class="btn btn-link float-right">¿No tiene cuenta? Registrarse como dueño</button>
                     <button onclick ="location.href='vet_registration.html'" type="button" class="btn btn-link float-right">Registrarse como veterinario</button>
                     
-                </form>
+                </div>
               </div>
-              <!--Put error messages here-->
-              <div id="indexAlertMessage">
-                
-              </div>
+              
             </div>
           </div>
         </div>
@@ -88,6 +85,8 @@
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    <script src="scripts/index.js"></script>
 </body>
 
 <!-- Footer -->

@@ -46,9 +46,10 @@
             <div class="col-lg-4 d-none d-lg-block colum_non_padding columna_izquierda columna_izquierda_owner_registration" >
             </div>
             <div class="col-lg-8 columna_derecha overflow-auto">
-                <form class="estilo_form">
+                <div class="estilo_form">
                     <h1 class="titulo">Dueño de mascota(s)</h1>
                     <br>
+                    <div id="mensajesEror"></div>
                     <h1 class="text">Nombre</h1>
                     <input type="text" class="form-control" name="pass_input"  id="id_nombre" required>
                     <div class="row">
@@ -61,14 +62,14 @@
                             <input type="text" class="form-control" name="pass_input" id="id_apellido2" required>
                         </div>
                     </div>
-                    <h1 class="text">Nombre de usuario</h1>
-                    <input type="text" class="form-control" name="pass_input" id="id_username" required>
                     <h1 class="text">Correo</h1>
                     <input type="email" class="form-control" name="pass_input" id="id_email" required>
                     <h1 class="text">Contraseña</h1>
-                    <input type="password" class="form-control" name="pass_input" id="id_password" required >
+                    <input type="password" class="form-control" name="pass_input" id="id_password" required>
+                    <h1 class="text">Confirme su contraseña</h1>
+                    <input type="password" class="form-control" name="pass_input" id="id_password2" required >
                     <button class="buttton" onclick="registrarDueño()">Registrarse</button>
-                </form>
+                </div>
             </div>
         </div>
     </div>
