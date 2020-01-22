@@ -6,17 +6,29 @@
 */
 function cargarPerfil(){
     //se obtiene las variables 
-    vet_name="Arlem Gabriel";
-    vet_lastname="Brenes Aguilar";
-    email="jogabra16@gmail.com";
-    vet_identity = "115510284";
-    vet_code = "1220-115510284"
-    $("#vet_name").html("<b>"+vet_name+"</B>"+vet_lastname);
-    $("#vet_email").html("<i class='icon icon-mail'></i> "+email);
-    $("#vet_identity").html("<i class='icon icon-identity'></i> "+vet_identity);
-    $("#vet_code").html("<i class='icon icon-vetcode'></i> "+vet_code);
+    vetNombre="Arlem Gabriel";
+    vetApellido="Brenes Aguilar";
+    correo="jogabra16@gmail.com";
+    vetCedula= "115510284";
+    vetCodigo = "1220-115510284"
+    $("#vetNombre").html("<b>"+vetNombre+"</B>"+vetApellido);
+    $("#vetCorreo").html("<i class='icon icon-mail'></i> "+correo);
+    $("#vetCedula").html("<i class='icon icon-identity'></i> "+vetCedula);
+    $("#vetCodigo").html("<i class='icon icon-vetcode'></i> "+vetCodigo);
+    $("#vetNotificaciones").html(buscarNotificaciones);
+    
 }
-
+function buscarNotificaciones(){
+    // Se obtienen las notificaciones y si hay entonces se muestra el icono de que hay notificaciones
+    // Si no hay notificaciones se muestra el icono de que no hay notificaciones
+    var notificaciones;
+    if(true){
+        notificaciones = '<h2 style = "color: green;"> Tiene notificaciones <a style="text-align: right;" id="vetNotificaciones" data-toggle="modal" data-target="#modalNotificaciones" onclick="cargarNotificaciones()">'+"<i class='icon icon-bell-on'></i> "+'</a></h2>';
+        return notificaciones;
+    }else{
+        notificaciones = ' No tiene notificaciones  <a style="text-align: right;" id="vetNotificaciones" data-toggle="modal" data-target="#modalNotificaciones" onclick="cargarNotificaciones()">'+"<i class='icon icon-bell-off'></i> "+'</a>';
+    }
+}
 
 /*
     Obtiene y carga las mascotas de un usuario
@@ -71,7 +83,51 @@ function cargarMascotas(){
     $('#contenedor_mascotas').append(html)
 
 }
+/*
+    Abre el editar pefil y carga los datos actuales
+*/
+function abrirEditarPerfil(){
+    //carga las variables para mostrarlas
+    vetNombre="Arlem Gabriel";
+    vetApellido="Brenes Aguilar";
+    correo="jogabra16@gmail.com";
+    vetCedula= "115510284";
+    vetCodigo = "1220-115510284"
+    //muestra las variables en los campos
+    $("#modalNombre").val(vetNombre);
+    $("#modalApellidos").val(vetApellido);
+    $("#modalCorreo").val(correo);
+    $("#modalCedula").val(vetCedula);
+    $("#modalCodigoVeterinario").val(vetCodigo);
+}
 
+/*
+    guarda los nuevos datos del perfil
+*/
+function modificarPerfil(){
+
+}
+
+/*
+    carga las notificaciones del veterinario
+*/
+function cargarNotificaciones(){
+
+}
+
+/*
+    envia solicitud de acceso
+*/
+function solicitarAcceso(){
+
+}
+
+/*
+    envia solicitud de acceso
+*/
+function buscarMascota(){
+
+}
 
 cargarPerfil();
 cargarMascotas();

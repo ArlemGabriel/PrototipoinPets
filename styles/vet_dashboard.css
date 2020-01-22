@@ -39,6 +39,12 @@
 .icon-pet-breed{
     background-image: url(../images/pet.svg);
 }
+.icon-user{
+    background-image: url(../images/user.svg);
+}
+.icon-pet-paw{
+    background-image: url(../images/paw.svg);
+}
 .searchfield{
     background-color: white;
     color: #49a0bc;
@@ -51,4 +57,8 @@
     text-decoration: none;
     font-family:  'arial', sans-serif;
     text-align: left;
+}
+
+.modal-margin-top{
+    margin-top: 16vw;
 }
