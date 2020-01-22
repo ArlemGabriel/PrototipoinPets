@@ -5,12 +5,154 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no"/>
         <meta http-equiv=”Content-Type” content="text/html" charset="UTF-8"/>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"/>
-        <link rel="stylesheet" type="text/css" href="styles/main.css" media="all"/>
+        <link rel="stylesheet" type="text/css" href="styles/pet_dashboard.css" media="all"/>
+        
+
+        <!--Bootstrap Scripts-->
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+         <!--Iconos-->
+         <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+
 </head>
 <body>
-    
-    <!--Bootstrap Scripts-->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        <!--Barra de Navegación-->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light" id="navbar">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/logo.svg" alt="logo"> inPETS
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Volver</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Cerrar sesión</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <br>
+        <br>
+        <div class="contenedor">
+            <div class="row">
+                <div class="col-md-2">
+                    <img class="imgMascota" id="id_img" src="https://arc-anglerfish-arc2-prod-elcomercio.s3.amazonaws.com/public/CD5DKS2JJVHFFMGMNOXOGDNWNY.jpg" alt="imagenMascota">
+                </div>
+                <div class="col-md-10">
+                    <div class="row">
+                        <div class="col-md-11">
+                            <h1 id="id_mascota"><b>Nombre mascota</b> #tag</h1>
+                        </div>
+                        <div class="col-md-1">
+                            <a id="icon_view"><i class='fas fa-edit' style="color: #646464;"></i></a>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-md-2">
+                            <h4 id="id_birth"><i class='fa fa-birthday-cake'></i> 07/05/2009</h4>
+                        </div>
+                        <div class="col-md-2">
+                            <h4 id="id_genero"><i class='fas fa-venus-mars'></i> Macho</h4>
+                        </div>
+                        <div class="col-md-2">
+                            <h4 id="id_raza"><i class='fas fa-paw'></i>Perro </h4>
+                        </div>
+                    </div>
+                    <br>
+                        <h4>Aca va el texto de toda la informacin</h4>    
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="contenedor">
+            <div class="row">
+                <div class="col-md-6">
+                    <a style="text-align: right;" id="icon_edit" onclick="buscarMascota()"> <i class='fas fa-search'></i> </a>
+                    <input class="texfield" placeholder="Busqueda por nombre, sexo, raza, etc" id="input_search"/>
+                </div>
+                <div class="col-md-3">
+                        <h4 style="display: inline;" ><i class='far fa-folder-open' ></i></h4>
+                        <select style="display: inline;" class="texfield" >
+                            <option value="Todos">Todos</option>
+                            <option value="Macho">Vacunas</option>
+                            <option value="Macho">Tratamientos</option>
+                            <option value="Macho">Diagnosticos</option>
+                        </select> 
+                </div>
+                <div class="col-md-3">
+                        <h4  style="display: inline;"><i class='fas fa-user-md'></i></h4>
+                        <select style="display: inline;" class="texfield">
+                            <option value="Todos">Todos</option>
+                        </select> 
+                </div>
+            </div>
+            <div id="contenedorDiagnosticos">
+                <div class="contenedorMascota">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <h4 style="display: inline;" ><i class='fas fa-capsules' ></i></h4>
+                                <h1 style="display: inline;">Diezepam <b>30 mg</b></h1>
+                            </div>
+                            <div class="col-md-2">
+                                    <h4 style="display: inline;" ><i class='fas fa-user-md' ></i> Doctor</h4>
+                            </div>
+                            <div class="col-md-2">
+                                    <h4  style="display: inline;"><i class='far fa-calendar-alt'></i> 28/05/2018</h4>
+                                    
+                            </div>
+                        </div>
+                        <hr>
+                        <h4>Aca va un texto con la descripcion del medicaent</h4>
+                </div>
+                <div class="contenedorMascota">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <h4 style="display: inline;" ><i class='fas fa-syringe' ></i></h4>
+                            <h1 style="display: inline;">Tetravalente <b>10 ml</b></h1>
+                        </div>
+                        <div class="col-md-2">
+                                <h4 style="display: inline;" ><i class='fas fa-user-md' ></i> Doctor</h4>
+                        </div>
+                        <div class="col-md-2">
+                                <h4  style="display: inline;"><i class='far fa-calendar-alt'></i> 28/05/2018</h4>
+                                
+                        </div>
+                    </div>
+                    <hr>
+                    <h4>Aca va un texto con la descripcion del medicaent</h4>
+                </div>
+                <div class="contenedorMascota">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h4 style="display: inline;" ><i class='fas fa-notes-medical' ></i></h4>
+                            <h1 style="display: inline;">Revisión rutinaria de agosto</h1>
+                        </div>
+                        <div class="col-md-1">
+                            <h4 style="display: inline;" ><i class='fas fa-thermometer' ></i> 36ºC</h4>
+                        </div>
+                        <div class="col-md-1">
+                            <h4 style="display: inline;" ><i class='fas fa-weight' ></i> 15 kg</h4>
+                        </div>
+                        <div class="col-md-2">
+                                <h4 style="display: inline;" ><i class='fas fa-user-md' ></i> Doctor</h4>
+                        </div>
+                        <div class="col-md-2">
+                                <h4  style="display: inline;"><i class='far fa-calendar-alt'></i> 28/05/2018</h4>                               
+                        </div>
+                    </div>
+                    <hr>
+                    <h4>Aca va un texto con la descripcion del medicaent</h4>
+                </div>
+            </div>
+        </div>
+    <!--Funcionalidad-->
+     <script src='scripts/pet_dashboard.js'></script>
 </body>

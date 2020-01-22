@@ -1,0 +1,209 @@
+
+html, body{
+    background-color: #F4F3EF;
+    font-size: 100%;
+}
+
+/*Barra de navegacion*/
+#navbar{
+    box-shadow: 0px -1.5em 2em #000000;
+}
+
+#navbar img{
+    height: 2.5em;
+}
+
+
+/*Contenedores*/
+.contenedor{
+    width: 90%;
+    margin: auto;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 4px;
+}
+
+
+.contenedorMascota{
+    margin: auto;
+    margin-top: 20px;
+    width: 100%;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0px -1m 1em #000000;
+    border: solid 1px #646464;
+    border-radius: 4px;
+}
+
+
+.contenedorPermisos{
+    margin: auto;
+    margin-top: 10px;
+    background-color: white;
+    border-bottom: solid 1px #646464;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.contenedormodal{
+    padding: 5px;
+    margin: auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 4px;
+}
+
+.imgMascota{
+    width: 150px;
+    height:150px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.padding{
+    padding: 0px;
+}
+
+
+/*Textos*/
+
+
+h1{
+    color: #646464;
+    font-size: 25px;
+    text-decoration: none;
+    font-family: 'arial', sans-serif;
+}
+
+h2{
+    color: #646464;
+    font-size: 18px;
+    text-decoration: none;
+    font-family: 'arial', sans-serif;
+}
+
+h3{
+    color: #646464;
+    font-size: 20px;
+    text-decoration: none;
+    font-family: 'arial', sans-serif;
+    margin-right: 20px;
+    width: 100%;
+}
+
+h4{
+    color: #646464;
+    font-size: 15px;
+    text-decoration: none;
+    font-family: 'arial', sans-serif;
+    width: 100%;
+    text-align: left;
+}
+
+i{
+    color: #646464;
+    font-size: 20px;
+    text-decoration: none;
+    font-family: 'arial', sans-serif;
+    cursor: pointer;
+}
+
+.texfield{
+    background-color: white;
+    color: #646464;
+    padding: 5px;
+    border: none;
+    border: solid 1px #646464;
+    border-radius: 4px;
+    font-size: 17px;
+    text-decoration: none;
+    font-family:  'arial', sans-serif;
+    width: 80%;
+}
+
+.texfieldModal{
+    background-color: white;
+    color: #646464;
+    padding: 4px;
+    border: none;
+    border: solid 1px #646464;
+    border-radius: 4px;
+    font-size: 17px;
+    text-decoration: none;
+    font-family:  'arial', sans-serif;
+    width: 100%;
+}
+
+/*Botones*/
+
+.buttonAdd {
+    background-color: #49a0bc;
+    color: white;
+    cursor: pointer;
+    padding: 6px;
+    padding-left: 40px;
+    padding-right: 40px;
+    border: none;
+    border-radius: 4px;
+    opacity: 0.85;
+    font-size: 17px;
+    text-decoration: none;
+    font-family:  'arial', sans-serif;
+}
+
+
+.buttonModal{
+    background-color: #49a0bc;
+    color: white;
+    cursor: pointer;
+    padding: 6px;
+    border: none;
+    border-radius: 4px;
+    opacity: 0.85;
+    font-size: 17px;
+    text-decoration: none;
+    font-family:  'arial', sans-serif;
+    width: 100%;
+}
+
+
+.buttonRed {
+    background-color: #d32f2f;
+    color: white;
+    cursor: pointer;
+    padding: 6px;
+    border: none;
+    border-radius: 4px;
+    opacity: 0.85;
+    font-size: 13px;
+    text-decoration: none;
+    font-family:  'arial', sans-serif;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.buttonGreen {
+    background-color: #7cb342;
+    color: white;
+    cursor: pointer;
+    padding: 6px;
+    border: none;
+    border-radius: 4px;
+    opacity: 0.85;
+    font-size: 13px;
+    text-decoration: none;
+    font-family:  'arial', sans-serif;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+
+
+/*Responsive*/
+
+@media only screen and (max-width:1200px) {
+    h3{
+        text-align: center;
+    }
+}
