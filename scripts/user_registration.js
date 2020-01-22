@@ -160,4 +160,5 @@ function registrarDueño(){
     else{
         $("#mensajesEror").html('<div class="alert alert-danger" role="alert">Complete todos los datos</div>')
     }
+     
 }

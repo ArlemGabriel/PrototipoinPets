@@ -1,6 +1,8 @@
 //se llamas a las funciones 
-
-
+/*
+    Variables globales 
+*/
+var img64;
 /* 
     Configura las variables del perfil
 */
@@ -185,8 +187,46 @@ function descartarNotificacion(){
 /*
     Agrega una nueva mascota
 */
-function agregarMascota(){
 
+function agregarMascota(){
+    console.log(obtenerEspecies());
+    
+    /*$('#modalagregarMascota').modal('hide');
+    var nombremascota = document.getElementById("modalNombreMascota").value;
+    var dianacimiento = document.getElementById("modalBirth").value;
+    var lista = document.getElementById("generoMascota");
+    var indice = lista.selectedIndex;
+    var genero = lista.options[indice].text;
+    lista = document.getElementById("especieMascota");
+    indice = lista.selectedIndex;
+    var especie = lista.options[indice].text;
+    lista = document.getElementById("razaMascota");
+    indice = lista.selectedIndex;
+    var raza = lista.options[indice].text;
+    var descr= document.getElementById("descripcionMascota").value;
+    var descripcion = descr.trim();
+    const objetoMascota = {"session": "5e27fff71987a63ea4d9a47e","pet": {
+        "name": "Peludito",
+        "description": "Peludito es juguetón",
+        "sex": "M", //Must be in strings.sexes
+        "birthday": dianacimiento,
+        "species": "DOG", //Must be in strings.species.keys
+        "breed": "PUG", //Must be in strings.species.SPECIES
+        "image": img64 //Base64 representation of the image
+        }
+    }
+    fetch("https://ajoscram.github.io/inpets-api/#/", { 
+            method: "POST",
+            headers: {
+                "accept": "application/json",
+                "content-type" : "application/json; charset=UTF-8"
+            }, 
+            "body": JSON.stringify(objetoMascota) 
+        })
+        .then(response => { return response.json(); })
+        .then(json => { console.log(json)})
+        .catch(error => { console.log(error); });
+    console.log(img64);*/
 }
 
 
@@ -200,9 +240,15 @@ function buscarMascota(){
 }
 
 
-
-
-
+function handleFiles(files){
+    if (files && files[0]) {
+        var FR= new FileReader();
+        FR.addEventListener("load", function(e) {
+            img64 = FR.result.split(',')[1];
+        });  
+        FR.readAsDataURL(files[0] );
+    }
+}
 
 cargarPerfil();
 cargarMascotas();
