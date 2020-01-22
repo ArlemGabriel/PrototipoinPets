@@ -125,5 +125,23 @@ var myvar = '<div class="contenedorMascota">'+
 }
 
 
+function abrirModificarMascota(){
+    var imgagen="https://misanimales.com/wp-content/uploads/2015/02/labrador-retriever.jpg"
+    var nombreMascota="Puppy";
+    var tagMascota="4577";
+    var tipo="Perro";
+    var raza="Labrador"
+    var genero="Macho";
+    var birth="25/02/2018";
+    var infoAdiconal="Aca va todo el contenido de la informacion de la mascota"
+
+    $("#modalNombreMascota").val(nombreMascota);
+    $("#idBirth").val(birth);
+    $("#id_genero").val(genero);
+    $("#id_tipo").val(tipo);
+    $("#id_raza").val(raza);
+    $("#id_textArea").val(infoAdiconal);
+}
+
 cargarRegistroMedico();
 cargarInfoMascota();

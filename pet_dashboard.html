@@ -30,7 +30,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Volver</a>
+                        <a class="nav-link" href="#">Volver</a> 
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="index.html">Cerrar sesión</a>
@@ -51,7 +51,7 @@
                             <h1 id="id_mascota"><b>Nombre mascota</b> #tag</h1>
                         </div>
                         <div class="col-md-1">
-                            <a id="icon_view"><i class='fas fa-edit' style="color: #646464;"></i></a>
+                            <a id="icon_view"><i class='fas fa-edit' style="color: #646464;"  data-toggle="modal" data-target="#modalModificarMascota"  onclick="abrirModificarMascota()"></i></a> 
                         </div>
                     </div>
                     <hr>
@@ -158,3 +158,81 @@
     <!--Funcionalidad-->
      <script src='scripts/pet_dashboard.js'></script>
 </body>
+
+
+   <!-- Modal modificar mascotas -->
+   <div id="modalModificarMascota" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" style="text-align: center;">Datos de la mascota</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="contenedormodal">
+                    <div class="row" style="margin-bottom: 10px;">
+                        <div class="col-md-1 align-self-center">
+                            <h3><i class='fas fa-paw'></i></h3>
+                        </div>
+                        <div class="col-md-11">
+                            <input class="texfieldModal"  id="modalNombreMascota" placeholder="Nombre de la mascota">
+                        </div>
+                    </div>
+                    <div class="row" style="margin-bottom: 10px;">
+                        <div class="col-md-1 align-self-center">
+                            <h3><i class='fa fa-birthday-cake'></i></h3>
+                        </div>
+                        <div class="col-md-5">
+                            <input type="date" class="texfieldModal"  id="idBirth" placeholder="Apellidos">
+                        </div>
+                        <div class="col-md-1 align-self-center">
+                            <h3><i class='fa fa-venus-mars'></i></h3>
+                        </div>
+                        <div class="col-md-5">
+                            <select class="texfieldModal" id="id_genero">
+                                <option value="Macho">Macho</option>
+                                <option value="Hembra">Hembra</option>
+                              </select>
+                        </div>
+                    </div> 
+                    <div class="row" style="margin-bottom: 10px;">
+                        <div class="col-md-1 align-self-center">
+                            <h3><i class='fas fa-dog'></i></h3>
+                        </div>
+                        <div class="col-md-5">
+                            <select class="texfieldModal" id="id_tipo">
+                                <option value="Perro">Perro</option>
+                                <option value="Gato">Gato</option>
+                                <option value="Ave">Ave</option>
+                                <option value="Reptil">Reptil</option>
+                                <option value="Roedor">Roedor</option>
+                              </select>
+                        </div>
+                        <div class="col-md-6">
+                            <select class="texfieldModal" id="id_raza">
+                                <option value="Pug">Pug</option>
+                                <option value="Boxer">Boxer</option>
+                                <option value="Schnauzer">Schnauzer</option>
+                              </select>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-bottom: 10px;">
+                        <div class="col-md-1 align-self-center">
+                            <h3><i class='far fa-edit'></i></h3>
+                        </div>
+                        <div  class="col-md-11" >
+                            <textarea class="texfieldModal" id="id_textArea" rows="4" cols="50">
+                            
+                            </textarea>
+                        </div >
+                        
+                    </div>             
+
+                    <button class="buttonModal" type="button" onclick="agregarMascota()">Agregar mascota</button>
+                </div>
+            </div>
+      </div>
+  
+    </div>
+  </div>
